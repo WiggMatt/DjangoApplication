@@ -1,0 +1,28 @@
+{%extends 'DjangoApplication//base_layout.html' %}
+{% load static %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'DjangoApplication/css/about.css' %}">
+{% endblock %}
+{% block header %}
+{% include 'DjangoApplication/header.html' %}
+{% endblock %}
+{% block content %}
+<body>
+  <section class="about-us">
+    <div class="about">
+      <img src="https://cdn-icons-png.flaticon.com/512/37/37543.png" class="pic">
+      <div class="text">
+        <h2>About Me</h2>
+        <h5>BACK!!!!!-end Developer & <span>JAVA!!!! Developer</span></h5>
+          <p>I really love python, it's my favorite language! I love HTML and CSS, I've dreamed of writing this shit since childhood! And also, I sincerely love JS (only when I'm stoned in drool)!</p>
+        <div class="data">
+        <a href="#" class="hire">Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+{% endblock %}
