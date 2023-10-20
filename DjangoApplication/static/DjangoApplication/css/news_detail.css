@@ -51,3 +51,27 @@
     color: #ffffff;
     margin-top: 10px;
 }
+
+.edit-button {
+    background-color: #000080; /* Цвет фона */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Отступы вокруг текста */
+    border: none; /* Убираем границу */
+    border-radius: 4px; /* Закругляем углы */
+    cursor: pointer; /* Изменение курсора при наведении */
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    display: inline-block; /* Делаем блоком для определения ширины и высоты */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+
+.edit-button:hover {
+    background-color: #000119; /* Цвет фона при наведении */
+}
+
+
+.news-photo {
+    max-width: 40%; /* Максимальная ширина изображения по ширине контейнера */
+    height: auto; /* Автоматическая высота, чтобы изображение не искажалось */
+    width: 40%; /* 100% ширина контейнера */
+}

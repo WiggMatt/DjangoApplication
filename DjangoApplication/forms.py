@@ -1,5 +1,5 @@
 from .models import News
-from django.forms import ModelForm, TextInput, Textarea, Select, DateTimeInput
+from django.forms import ModelForm, TextInput, Textarea, Select
 
 
 class NewsForm(ModelForm):

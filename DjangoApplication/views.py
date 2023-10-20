@@ -17,6 +17,30 @@ def news_detail(request, news_id):
     return render(request, 'DjangoApplication/news_detail.html', {'news': news})
 
 
+def news_delete(request, news_id):
+    news = get_object_or_404(News, id=news_id)
+
+    if request.method == 'POST':
+        news.delete()
+        return redirect('news')
+
+    return render(request, 'DjangoApplication/news_delete.html', {'news': news})
+
+
+def news_update(request, news_id):
+    news = get_object_or_404(News, id=news_id)
+
+    if request.method == 'POST':
+        form = NewsForm(request.POST, request.FILES, instance=news)
+        if form.is_valid():
+            form.save()
+            return redirect('news_detail', news.id)
+    else:
+        form = NewsForm(instance=news)
+
+    return render(request, 'DjangoApplication/create_news.html', {'form': form, 'news': news})
+
+
 def create_news(request):
     if request.method == 'POST':
         form = NewsForm(request.POST)
