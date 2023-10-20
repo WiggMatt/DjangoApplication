@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота контейнера равная высоте видимой области экрана */
+}
+
+.content-center {
+    text-align: center;
+}
+
+/* Стиль для заголовка h1 */
+h1 {
+    font-size: 36px;
+    font-family: Arial, sans-serif;
+    color: #000080; /* Цвет текста заголовка */
+    text-align: center; /* Выравнивание текста по центру */
+    margin-bottom: 50px;
+}
+
+/* Стиль для контейнера новостей */
+.news-container {
+    display: flex; /* Размещаем новости в строку */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Равномерное распределение новостей по ширине */
+    align-items: center; /* Выравниваем новости по центру вертикально */
+    max-height: 700px; /* Установите максимальную высоту контейнера */
+}
+
+/* Стиль для карточек новостей */
+.news-card {
+    flex: 0 0 calc(33.33% - 10px); /* Расширяем карточки, чтобы они занимали равные части контейнера */
+    border: 1px solid #ccc; /* Граница вокруг карточек */
+    padding: 10px; /* Внутренние отступы внутри карточек */
+
+     margin-bottom: 20px;
+    background-color: #f9f9f9;
+    text-align: center; /* Выравнивание текста по центру */
+     border-radius: 5px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-card p {
+            margin: 10px 0;
+}
+
+
+/* Стиль для текста внутри карточек новостей */
+.news-card p {
+    font-size: 18px;
+    color: #666; /* Цвет текста новости */
+}
+
+.read-more-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Добавим анимацию при наведении */
+}
+
+.read-more-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Небольшой масштаб при наведении */
+}
+
+.read-more-button:active {
+    background-color: #003f80;
+    transform: scale(0.95); /* Сжатие при нажатии */
+}
+
+

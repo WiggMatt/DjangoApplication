@@ -1,0 +1,24 @@
+{%extends 'DjangoApplication//base_layout.html' %}
+{% load static %}
+
+{% block title %}Форма по добавлению статьи{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'DjangoApplication/css/create_news.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Форма по добавлению статьи</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.title }}<br>
+        {{ form.content }}<br>
+        {{ form.category }}<br>
+        {{ form.autor }}<br>
+        {{ form.create_at }}<br>
+        <button class="btn btn-success" type="submit">Подтвердить</button>
+    </form>
+</div>
+{% endblock %}

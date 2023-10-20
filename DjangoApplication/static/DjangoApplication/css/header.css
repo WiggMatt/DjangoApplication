@@ -1,0 +1,24 @@
+.custom-navbar {
+    background-color: #007bff;
+    color: white;
+    border-bottom: 1px solid #0056b3; /* Добавление подчеркивания */
+    transition: background-color 0.3s;
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-color: white;
+}
+
+.custom-navbar .navbar-nav .nav-item .nav-link {
+    color: white;
+    transition: color 0.3s;
+    font-size: 16px; /* Увеличение размера шрифта */
+}
+
+.custom-navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #f8f9fa;
+}
+
+.custom-navbar .navbar-nav .nav-item .nav-link.active {
+    background-color: #0056b3; /* Цвет фона для активной ссылки */
+}
