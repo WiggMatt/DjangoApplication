@@ -17,7 +17,6 @@ class News(models.Model):
     title = models.CharField(max_length=255, verbose_name="Заголовок")
     content = models.TextField(verbose_name="Контент")
     create_at = models.DateTimeField(auto_now_add=True, verbose_name="Время публикации")
-    updated_at = models.DateTimeField(verbose_name="Изменено", null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name="Категория новости")
     autor = models.CharField(max_length=255, verbose_name="Автор", blank=True, default=None, null=True)
 

@@ -43,12 +43,12 @@ def news_update(request, news_id):
 
 def create_news(request):
     if request.method == 'POST':
-        form = NewsForm(request.POST)
+        form = NewsForm(request.POST, request.FILES)
         if form.is_valid():
             news = form.save(commit=False)
             news.create_at = timezone.now()
             news.save()
-            return redirect('news_detail', news.id)
+            return redirect('news')
     else:
         form = NewsForm()
     data = {'form': form}

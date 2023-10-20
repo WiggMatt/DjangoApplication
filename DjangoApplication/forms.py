@@ -5,7 +5,7 @@ from django.forms import ModelForm, TextInput, Textarea, Select
 class NewsForm(ModelForm):
     class Meta:
         model = News
-        fields = ['title', 'content', 'autor', 'category']
+        fields = ['title', 'content', 'autor', 'category', 'photo']
 
         widgets = {
             "title": TextInput(attrs={
